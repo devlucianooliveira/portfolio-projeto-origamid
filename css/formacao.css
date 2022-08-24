@@ -1,0 +1,130 @@
+.formacao {
+  background: #141414;
+  color: #ffffff;
+}
+
+.formacao-container {
+  max-width: 1140px;
+  padding: 80px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 40px;
+  position: relative;
+}
+
+.formacao-container::after {
+  content:"";
+  display: block;
+  width: 70px;
+  height: 99px;
+  background: url(../img/destaque.svg) no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+.formacao .subtitulo {
+  color: #000000;
+  max-width: 5ch;
+}
+
+.formacao-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 45ch;
+  margin-bottom: 40px;
+  color: #a3a3a3;
+}
+
+.formacao-texto strong {
+  color: #ffffff;
+}
+
+.curso-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.curso {
+  background: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.curso-tipo {
+  font-size: .875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 10px;
+  letter-spacing: .09rem;
+}
+
+.curso-nome {
+  flex: 1;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.curso-nome::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#01D1FF, #F22982);
+  position: absolute;
+  left: -24px;
+}
+
+.idiomas h3 {
+  font-size: .875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.idiomas h3::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/idioma.svg) no-repeat center center;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+
+.idiomas li {
+  font-size: .875rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.idiomas span {
+  color: #8f8f8f;
+}
+
+@media (max-width: 1000px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+  }
+  .formacao .subtitulo {
+    color: #ffffff;
+  }
+  .formacao-texto {
+    font-size: 1.25rem;
+    max-width: 60ch;
+  }
+  .idiomas h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}
